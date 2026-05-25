@@ -20,28 +20,28 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Show Repository Structure
+      - name: Display Repository Structure
         run: |
-          echo "Mini RISC Processor Repository Structure"
+          echo "Mini RISC Processor Repository"
           ls -R
 
-      - name: Verify RTL Files
+      - name: Check RTL Source Files
         run: |
-          test -f rtl/alu.v
-          test -f rtl/clock_divider.v
-          test -f rtl/control_unit.v
-          test -f rtl/instruction_memory.v
-          test -f rtl/program_counter.v
-          test -f rtl/register_file.v
-          test -f rtl/risc_top.v
+          test -f sim/alu.v
+          test -f sim/clock_divider.v
+          test -f sim/control_unit.v
+          test -f sim/instruction_memory.v
+          test -f sim/program_counter.v
+          test -f sim/register_file.v
+          test -f sim/risc_top.v
 
-      - name: Verify Testbench
+      - name: Check Testbench
         run: |
-          test -f testbench/risc_tb.v
+          test -f tb/risc_tb.v
 
-      - name: Verify Constraints File
+      - name: Check Constraint File
         run: |
-          test -f constraints/risc_basys3.xdc
+          test -f const/risc_basys3.xdc
 
-      - name: Workflow Success
-        run: echo "All Mini RISC Processor checks passed successfully."
+      - name: Success Message
+        run: echo "Mini RISC Processor CI checks passed successfully."
