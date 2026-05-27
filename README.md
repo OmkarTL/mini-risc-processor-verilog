@@ -35,6 +35,10 @@ The processor consists of:
 - Clock Divider
 - FPGA LED Debug Interface
 
+### Block Diagram
+
+![Processor Architecture](docs/images/architecture.png)
+
 ---
 
 ## Instruction Format
@@ -57,6 +61,12 @@ The processor consists of:
 | 0010 | AND |
 | 0011 | OR |
 
+
+### Instruction Execution Flow
+
+![Instruction Flow](docs/images/waveform.png)
+
+
 ---
 
 ## FPGA Board
@@ -75,7 +85,11 @@ mini-risc-processor-verilog/
 ├── sim/
 ├── tb/
 ├── const/
-├── waveforms/
+└── docs/
+│      └── images/
+│          ├── architecture.png
+│          ├── waveform.png
+│          └── risc_rtl.png
 ├── .github/workflows/
 │
 ├── README.md
@@ -93,6 +107,9 @@ Behavioral simulation successfully verified:
 - Register Read/Write
 - Program Counter Increment
 - FPGA LED Output
+
+## RTL Schematic
+![RTL Schematic](docs/images/risc-rtl.p)
 
 ---
 
