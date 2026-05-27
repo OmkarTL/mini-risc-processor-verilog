@@ -109,7 +109,7 @@ Behavioral simulation successfully verified:
 - FPGA LED Output
 
 ## RTL Schematic
-![RTL Schematic](docs/images/risc-rtl.p)
+![RTL Schematic](docs/images/risc-rtl.png)
 
 ---
 
